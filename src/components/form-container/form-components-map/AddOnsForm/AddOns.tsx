@@ -34,7 +34,7 @@ export const AddOns: React.FunctionComponent<AddOnsProps> = () => {
                         onClick={handleToggleAddOn}
                         className={`${isFirst ? "" : "mt-4"} ${isSelected ? "border-blue-300 bg-blue-100/20" : "border-gray-400"} border  hover:border-blue-300 transition-all duration-[300ms] rounded-lg flex items-center p-4 hover:bg-blue-100/20`}
                     >
-                        <div className={`w-6 h-6 bg-blue-300 rounded flex items-center justify-center`}>{isSelected ? <Image src="/icon-checkmark.svg" alt="check" width={16} height={16} /> : null}</div>
+                        <div className={`w-6 h-6 border rounded flex items-center justify-center ${isSelected ? "bg-blue-300 border-blue-300" : "bg-white border-gray-300"}`}>{isSelected ? <Image src="/icon-checkmark.svg" alt="check" width={16} height={16} /> : null}</div>
                         <div className={`ml-6 flex flex-col items-start`}>
                             <p className="text-blue-400 font-medium">{addOn.label}</p>
                             <p className="text-gray-400">{addOn.description}</p>
