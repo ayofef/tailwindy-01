@@ -12,7 +12,7 @@ export const PersonalInfoForm: React.FunctionComponent<PersonalInfoFormProps> = 
                 <TextInput key={field.name} label={field.label} id={field.name} placeholder={field.placeholder} />
             ))}
 
-            <Button label="Next Step" nextStepId={FORM_ID_MAP.SELECT_PLAN} />
+            <Button nextStepId={FORM_ID_MAP.SELECT_PLAN} />
         </FormWrapper>
     );
 };
