@@ -1,5 +1,5 @@
 import { FormContainer, FormContainerProps } from "@/components/form-container";
-import { FORM_STEPS } from "@/constants/form-steps";
+import { FORM_STEPS, FormIds } from "@/constants/form-steps";
 
 export async function generateStaticParams() {
     return FORM_STEPS.map((step) => ({
@@ -8,5 +8,5 @@ export async function generateStaticParams() {
 }
 
 export default function Home({ params }: { params: FormContainerProps }) {
-    return <FormContainer stepId={Number(params.stepId || 0)} />;
+    return <FormContainer stepId={Number(params.stepId || 0) as FormIds} />;
 }
